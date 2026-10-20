@@ -1,0 +1,39 @@
+[language-server.shader-language-server]
+command = "shader-language-server"
+args = [ "--stdio", "--hlsl" ]
+
+[[language]]
+name = "c"
+scope = "source.c"
+injection-regex = "c"
+file-types = ["c"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "clangd" ]
+indent = { tab-width = 8, unit = "        " } # kernel style :)
+
+[[language]]
+name = "hlsl"
+scope = "source.hlsl"
+injection-regex = "hlsl"
+file-types = ["hlsl", "vert", "tesc", "tese", "geom", "frag", "comp" ]
+comment-tokens = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "shader-language-server" ]
+
+[[grammar]]
+name = "hlsl"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-hlsl", rev = "bab9111922d53d43668fabb61869bec51bbcb915" }
+
+[[language]]
+name = "batch"
+scope = "source.bat"
+injection-regex = "batch"
+file-types = [ "bat" ]
+comment-tokens = "::"
+indent = { tab-width = 4, unit = "    " }
+
+[[grammar]]
+name = "batch"
+source = { git = "https://github.com/wharflab/tree-sitter-batch", rev = "2aa22f00d7f5bbe58556b8eef0b1fc1629508603" }

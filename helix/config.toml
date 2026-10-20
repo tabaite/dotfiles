@@ -1,0 +1,39 @@
+theme="onedarker"
+
+[editor]
+mouse=false
+bufferline="always"
+cursorline=true
+
+[editor.lsp]
+display-inlay-hints=true
+
+[editor.statusline]
+left=["read-only-indicator", "diagnostics", "mode"]
+center=["file-name"]
+right=["position", "version-control"]
+
+[editor.cursor-shape]
+normal="block"
+insert="bar"
+select="underline"
+
+[keys.select]
+"0"="goto_line_start"
+"$"="goto_line_end"
+
+[keys.normal]
+"0"="goto_line_start"
+"$"="goto_line_end"
+# From my nvim config. I can't live without these!!
+C-h="jump_view_left"
+C-j="jump_view_down"
+C-k="jump_view_up"
+C-l="jump_view_right"
+
+[keys.insert]
+# i don't think this conflicts with anything
+C-h="jump_view_left"
+C-j="jump_view_down"
+C-k="jump_view_up"
+C-l="jump_view_right"
