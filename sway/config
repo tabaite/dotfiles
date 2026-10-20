@@ -8,9 +8,9 @@
 ### Touchpad tap support
 input "type:touchpad" {
     # scrolling is normally too fast...
-    scroll_factor 0.4
+    scroll_factor 0.2
 
-    pointer_accel 0.55
+    pointer_accel 0.5
     accel_profile flat
 
     drag_lock disabled
