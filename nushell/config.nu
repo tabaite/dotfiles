@@ -1043,3 +1043,4 @@ let new_path = $opam_env.PATH | split row ":";
 $opam_env.PATH = $new_path;
 
 $opam_env | load-env
+source "~/.cargo/env.nu"
