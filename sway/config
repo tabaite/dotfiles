@@ -35,6 +35,7 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 set $browser helium
+set $editor gram
 # Your preferred application launcher
 set $menu fuzzel
 
@@ -106,7 +107,7 @@ client.background $bg
     # Start a terminal
     bindsym $mod+Return exec $term
 
-    bindsym $copilot exec $browser
+    bindsym $copilot exec $browser & $editor
 
     # Kill focused window
     bindsym $mod+Shift+q kill
