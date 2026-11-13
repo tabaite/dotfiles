@@ -3,3 +3,7 @@ nushell
 waybar
 fuzzel
 foot
+
+
+twemoji
+powerline-go
