@@ -1,0 +1,12 @@
+term = xterm-256color
+shell-integration-features = true
+
+command = fish
+
+font-family = Lilex Nerd Font
+font-family = Noto Color Emojis
+font-size = 9
+
+background = #000000
+background-opacity = 0.6
+gtk-single-instance = true
