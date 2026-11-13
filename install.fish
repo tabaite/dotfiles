@@ -25,6 +25,7 @@ function main_clean
     rm -rf $HOME/.config/fish
     rm -rf $HOME/.config/helix
     rm -rf $HOME/.config/fuzzel
+    rm -rf $HOME/.config/ghostty
     rm -rf $HOME/.config/sway
     rm -rf $HOME/.config/waybar
     rm -rf $HOME/.config/foot
@@ -34,11 +35,12 @@ function main_install
     echo "installing fish dots..."
     stow_install fish
 
-    echo
+    echo "installing ghostty dots..."
+    stow_install ghostty
+
     echo "installing helix dots..."
     stow_install helix
 
-    echo
     echo "installing waybar, sway, fuzzel dots..."
     stow_install fuzzel
     stow_install sway
@@ -53,17 +55,17 @@ function main_uninstall
     echo "uninstalling fish dots..."
     stow_remove fish
 
-    echo
+    echo "uninstalling ghostty dots..."
+    stow_remove ghostty
+
     echo "uninstalling helix dots..."
     stow_remove helix
 
-    echo
     echo "uninstalling waybar, sway, fuzzel dots..."
     stow_remove fuzzel
     stow_remove sway
     stow_remove waybar
 
-    echo
     echo "uninstalling foot confs..."
     stow_remove foot
 end
