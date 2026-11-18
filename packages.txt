@@ -6,4 +6,4 @@ foot
 
 
 twemoji
-powerline-go
+starship-rs

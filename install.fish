@@ -29,11 +29,15 @@ function main_clean
     rm -rf $HOME/.config/sway
     rm -rf $HOME/.config/waybar
     rm -rf $HOME/.config/foot
+    rm -$HOME/.config/starship.toml
 end
 
 function main_install
     echo "installing fish dots..."
     stow_install fish
+
+    echo "installing starship conf..."
+    stow_install starship.toml
 
     echo "installing ghostty dots..."
     stow_install ghostty
@@ -54,6 +58,9 @@ end
 function main_uninstall
     echo "uninstalling fish dots..."
     stow_remove fish
+
+    echo "uninstalling starship conf..."
+    stow_remove starship.toml
 
     echo "uninstalling ghostty dots..."
     stow_remove ghostty
