@@ -1,12 +1,15 @@
 * {
+    border-radius: 10px;
     font-family: 'Lilex Nerd Font', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
-    font-size: 13px;
-    background-color: rgba(0,0,0,0);
+    font-size: 11px;
     /* background-color: #2c323c; */
+    background-color: rgba(0,0,0,0);
 }
 
 window#waybar {
-    background-color: #2c323c;
+    margin: 4px;
+    /* background-color: #2c323c; */
+    background-color: rgba(0,0,0,0);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -87,29 +90,35 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd {
+#mpd,
+#window,
+#workspaces {
     padding: 0 10px;
-    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
     color: #ffffff;
-}
-
-/* Actual applet menu */
-#tray menu {
     background-color: #2c323c;
 }
 
-#window,
-#workspaces {
-    margin: 0 4px;
+/* Actual applet/module menu */
+tooltip,
+tooltip label,
+#tray menu {
+    background-color: #2c323c;
 }
+tooltip,
+tooltip label {
+    padding: 0;
+}
+
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
-
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right > widget:last-child {
     margin-right: 0;
 }
 
