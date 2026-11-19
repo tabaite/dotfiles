@@ -10,3 +10,5 @@ font-size = 9
 background = #000000
 background-opacity = 0.6
 gtk-single-instance = true
+
+window-padding-x = 4
