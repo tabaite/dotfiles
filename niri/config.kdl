@@ -170,7 +170,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#7fc8ffbb"
 
         // Color of the ring on inactive monitors.
         //
@@ -308,6 +308,34 @@ animations {
     // slowdown 3.0
 }
 
+// Layer rules let us do stuff to the launcher, bar, and other fun stuff.
+
+// Enable blur behind waybar.
+layer-rule {
+    match namespace="^waybar$"
+
+    background-effect {
+        blur true
+    }
+
+    popups {
+        background-effect {
+            xray false
+            blur true
+        }
+    }
+}
+
+// Enable blur behind the fuzzel launcher.
+layer-rule {
+    match namespace="^launcher$"
+
+    background-effect {
+        xray false
+        blur true
+    }
+}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
@@ -377,11 +405,11 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+S { spawn-sh "sleep.sh"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.

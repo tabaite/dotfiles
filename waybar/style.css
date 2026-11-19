@@ -2,14 +2,13 @@
     border-radius: 10px;
     font-family: 'Lilex Nerd Font', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
     font-size: 11px;
-    /* background-color: #2c323c; */
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
 }
 
 window#waybar {
     margin: 4px;
     /* background-color: #2c323c; */
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -20,9 +19,6 @@ window#waybar.hidden {
 }
 
 /*
-window#waybar.empty {
-    background-color: transparent;
-}
 window#waybar.solo {
     background-color: #FFFFFF;
 }
@@ -98,14 +94,22 @@ button:hover {
     margin-left: 4px;
     margin-right: 4px;
     color: #ffffff;
-    background-color: #2c323c;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+window#waybar.empty #window,
+window#waybar.solo #window {
+    color: transparent;
+    background-color: transparent;
 }
 
 /* Actual applet/module menu */
 tooltip,
 tooltip label,
 #tray menu {
-    background-color: #2c323c;
+    border: none;
+    box-shadow: none;
+    background-color: rgb(80, 80, 80);
 }
 tooltip,
 tooltip label {
