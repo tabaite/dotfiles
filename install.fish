@@ -36,8 +36,8 @@ function main_install
     echo "installing fish dots..."
     stow_install fish
 
-    echo "installing starship conf..."
-    stow_install starship.toml
+    echo "installing niri conf..."
+    stow_install niri
 
     echo "installing ghostty dots..."
     stow_install ghostty
@@ -59,8 +59,8 @@ function main_uninstall
     echo "uninstalling fish dots..."
     stow_remove fish
 
-    echo "uninstalling starship conf..."
-    stow_remove starship.toml
+    echo "uninstalling niri conf..."
+    stow_remove niri
 
     echo "uninstalling ghostty dots..."
     stow_remove ghostty
