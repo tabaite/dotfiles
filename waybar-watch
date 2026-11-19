@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# change this to wherever you store this repo, inotifywait does NOT follow symlinks :/
+CONFIG_FILES="$HOME/repos/dotfiles/waybar/config.jsonc $HOME/repos/dotfiles/waybar/style.css"
+
+trap "killall waybar" EXIT
+
+while true; do
+    waybar &
+    inotifywait -e create,modify $CONFIG_FILES
+    killall waybar
+done

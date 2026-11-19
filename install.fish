@@ -53,6 +53,9 @@ function main_install
     echo
     echo "installing foot confs..."
     stow_install foot
+
+    echo "\"installing\" waybar-watch..."
+    cp waybar-watch ~/.local/bin
 end
 
 function main_uninstall
@@ -75,6 +78,9 @@ function main_uninstall
 
     echo "uninstalling foot confs..."
     stow_remove foot
+
+    echo "\"uninstalling\" waybar-watch..."
+    rm ~/.local/bin/waybar-watch
 end
 
 set -l cmd $argv[1]
