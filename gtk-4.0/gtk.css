@@ -2,6 +2,19 @@
     font-family: 'Lilex', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
 }
 
+window.hotkey-overlay,
+popover.hotkey-overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+window.hotkey-overlay label,
+window.hotkey-overlay .title {
+    color: #e0def4;
+    font-size: 13px;
+}
+
 .sidebar-pane,
 .floating-bar {
     background-color: transparent;

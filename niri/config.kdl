@@ -9,6 +9,10 @@
 
 prefer-no-csd
 
+environment {
+    GTK_IM_MODULE "simple"
+}
+
 blur {
     passes 2
     offset 3
@@ -313,6 +317,15 @@ animations {
     // slowdown 3.0
 }
 
+// recent window stuff
+recent-windows {
+    highlight {
+        corner-radius 16
+        padding 12
+        active-color "#7fc8ffbb"
+    }
+}
+
 // Layer rules let us do stuff to the launcher, bar, and other fun stuff.
 
 // Enable blur behind waybar.
@@ -324,9 +337,10 @@ layer-rule {
     }
 
     popups {
+        opacity 0.99
         background-effect {
             xray false
-            blur false
+            blur true
         }
     }
 }
@@ -459,9 +473,9 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false { toggle-overview; }
+    Mod+O hotkey-overlay-title="Get a \"Bird's Eye\" View of the Workspaces" repeat=false { toggle-overview; }
 
-    Mod+Shift+Q repeat=false { close-window; }
+    Mod+Shift+Q hotkey-overlay-title="Close the Focused Application" repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
