@@ -118,8 +118,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "inhibit on  󰒳 ",
-            "deactivated": "inhibit off 󰒲 "
+            "activated": "󰒳 ",
+            "deactivated": "󰒲 "
         }
     },
     "tray": {
@@ -152,7 +152,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C{icon}",
-        "format-icons": ["", "", "", "", " !", " !", " !!", " !!"]
+        "format-icons": ["", "", "", "", "", "", "!", " !", " !!", " !!"]
     },
     "backlight": {
         // "device": "acpi_video1",

@@ -27,6 +27,8 @@ function main_clean
     rm -rf $HOME/.config/fuzzel
     rm -rf $HOME/.config/ghostty
     rm -rf $HOME/.config/sway
+    rm -rf $HOME/.config/niri
+    rm -rf $HOME/.config/gtk-4.0
     rm -rf $HOME/.config/waybar
     rm -rf $HOME/.config/foot
     rm -$HOME/.config/starship.toml
@@ -38,6 +40,9 @@ function main_install
 
     echo "installing niri conf..."
     stow_install niri
+
+    echo "installing gtk styles (nautilus)"
+    stow_install gtk-4.0
 
     echo "installing ghostty dots..."
     stow_install ghostty
@@ -67,6 +72,9 @@ function main_uninstall
 
     echo "uninstalling ghostty dots..."
     stow_remove ghostty
+
+    echo "uninstalling gtk styles (nautilus)"
+    stow_remove gtk-4.0
 
     echo "uninstalling helix dots..."
     stow_remove helix

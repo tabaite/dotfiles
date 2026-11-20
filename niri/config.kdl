@@ -321,7 +321,7 @@ layer-rule {
     popups {
         background-effect {
             xray false
-            blur true
+            blur false
         }
     }
 }
@@ -342,6 +342,24 @@ layer-rule {
 
 window-rule {
     match app-id=r#"^com\.mitchellh\.ghostty$"#
+
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    // FUCK YOU GNOME AND FUCK CSD
+    draw-border-with-background false
+
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id=r#"^thunar$"#
 
     background-effect {
         blur true
