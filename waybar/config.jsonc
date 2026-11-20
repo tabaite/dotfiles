@@ -13,6 +13,7 @@
     "modules-left": [
         "idle_inhibitor",
         "sway/workspaces",
+        "niri/workspaces",
         "sway/scratchpad",
         "tray",
         "custom/media",
@@ -47,7 +48,7 @@
     //     }
     // },
     "niri/workspaces": {
-        "format": "{icon} {windows}",
+        "format": "{icon}",
         "format-window-separator": " ",
         "window-rewrite-default": "",
         "window-rewrite": {
@@ -63,7 +64,6 @@
             "3": "3",
             "4": "4",
             "5": "5",
-            "active": "",
             "default": ""
         }
     },
