@@ -43,6 +43,7 @@ function main_install
 
     echo "installing gtk styles (nautilus)"
     stow_install gtk-4.0
+    stow_install gtk-3.0
 
     echo "installing ghostty dots..."
     stow_install ghostty
@@ -77,6 +78,7 @@ function main_uninstall
 
     echo "uninstalling gtk styles (nautilus)"
     stow_remove gtk-4.0
+    stow_remove gtk-3.0
 
     echo "uninstalling helix dots..."
     stow_remove helix

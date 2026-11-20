@@ -9,6 +9,11 @@
 
 prefer-no-csd
 
+blur {
+    passes 2
+    offset 3
+}
+
 input {
     keyboard {
         xkb {
@@ -201,8 +206,8 @@ layout {
         off
 
         width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        active-color "#7fc8ffbb"
+        inactive-color "#505050bb"
 
         // Color of the border around windows that request your attention.
         urgent-color "#9b0000"
@@ -258,8 +263,8 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
+        left 8
+        right 8
         // top 64
         // bottom 64
     }

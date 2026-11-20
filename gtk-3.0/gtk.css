@@ -1,0 +1,21 @@
+* {
+    font-family: 'Lilex', 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+}
+
+.sidebar-pane,
+.floating-bar {
+    background-color: transparent;
+}
+
+.sidebar-pane,
+.view {
+    color: white;
+}
+
+.background
+.toolbar-view,
+.nautilus-window
+{
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
