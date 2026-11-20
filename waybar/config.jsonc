@@ -25,9 +25,6 @@
     "modules-right": [
         "mpd",
         "pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        "temperature",
         "battery",
         "battery#bat2",
         "clock",

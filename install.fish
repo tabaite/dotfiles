@@ -61,6 +61,8 @@ function main_install
 
     echo "\"installing\" waybar-watch..."
     cp waybar-watch ~/.local/bin
+    echo "\"installing\" waybar-watch-restart..."
+    cp waybar-watch-restart ~/.local/bin
 end
 
 function main_uninstall
@@ -89,6 +91,8 @@ function main_uninstall
 
     echo "\"uninstalling\" waybar-watch..."
     rm ~/.local/bin/waybar-watch
+    echo "\"uninstalling\" waybar-watch-restart..."
+    rm ~/.local/bin/waybar-watch-restart
 end
 
 set -l cmd $argv[1]
