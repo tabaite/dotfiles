@@ -64,6 +64,10 @@ function main_install
     cp waybar-watch ~/.local/bin
     echo "\"installing\" waybar-watch-restart..."
     cp waybar-watch-restart ~/.local/bin
+    # ln -t ~/.config/gram/themes /home/minh/repos/dotfiles/transparent-one-dark-gram.json
+    # this is sooo chudded out...
+    echo "\"installing\" gram trans theme..."
+    cp transparent-one-dark-gram.json ~/.config/gram/themes
 end
 
 function main_uninstall
@@ -95,6 +99,8 @@ function main_uninstall
     rm ~/.local/bin/waybar-watch
     echo "\"uninstalling\" waybar-watch-restart..."
     rm ~/.local/bin/waybar-watch-restart
+    echo "\"installing\" gram trans theme..."
+    rm ~/.config/gram/themes/transparent-one-dark-gram.json
 end
 
 set -l cmd $argv[1]
