@@ -3,7 +3,9 @@ nushell
 waybar
 fuzzel
 foot
+niri
+gram
+nautilus
 
-
-twemoji
+twemoji (font)
 starship-rs

@@ -1,4 +1,6 @@
-# my dotfile installer for sway!!!
+# my dotfile "installer" for sway!!!
+# I AM NOT RESPONSIBLE FOR ANY ISSUES THAT MAY ARISE
+# also the backgrounds are not bundled
 
 TODO:
 - background files
